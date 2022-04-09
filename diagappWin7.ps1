@@ -16,10 +16,10 @@ Write-OutPut ===================================================================
 chkdsk c: /scan >> $PathRoot\DiagTest\diag.txt
 Write-OutPut `n >> $PathRoot\DiagTest\diag.txt
 Write-OutPut ========================================================================================= >> $PathRoot\DiagTest\diag.txt
-Write-OutPut `n >> $PathRoot\DiagTest\dia.txt
+Write-OutPut `n >> $PathRoot\DiagTest\diag.txt
 defrag c: /A >> $PathRoot\DiagTest\diag.txt
 Get-Content $PathRoot\DiagTest\diag.txt
-Remove-Item $PathRoot\DiagTest
+Remove-Item -Recurse $PathRoot\DiagTest
 Write-Output "Ejecucion terminanda"
 
 # iex ((New-Object System.Net.WebClient).DownloadString('https://bit.ly/3xcdPCD'))
